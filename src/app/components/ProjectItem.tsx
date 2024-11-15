@@ -14,7 +14,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
 
   return (
     <motion.div
-      className="p-4 cursor-pointer bg-orange-500 hover:bg-white text-black transition-colors duration-500 flex justify-between items-center"
+      className="p-4 cursor-pointer bg-orange-500 hover:bg-white text-black transition-colors duration-500 flex justify-between items-center border border-black"
       onClick={() => {
         setTimeout(() => {
           router.push(link);
@@ -23,7 +23,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
       transition={{ duration: 1 }}
     >
       <h2 className="text-[80px]">{name}</h2>
-      <Image src="/arrow.png" alt="arrow" width={100} height={100} />
+      <Image src="/arrow.svg" alt="arrow" width={100} height={100} />
     </motion.div>
   );
 };

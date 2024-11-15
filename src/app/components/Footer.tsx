@@ -20,7 +20,7 @@ const Footer: React.FC = () => (
         href={link.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="hover:text-white mb-2 transition-colors duration-500 text-[40px]"
+        className="mb-2 transition-colors duration-500 text-[40px]"
       >
         {link.name}
       </motion.a>

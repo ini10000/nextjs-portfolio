@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       className="relative min-h-screen flex flex-col items-end justify-between text-right bg-white text-black px-4 pt-10 pb-20"
       onMouseMove={handleMouseMove}
     >
-      <motion.img src="/name.png" />
+      <motion.img src="/me.svg" />
       <motion.h1
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
         <motion.img
           src="/me.png" // Replace with your image path
           alt="Hover effect"
-          className="absolute pointer-events-none w-16 h-16"
+          className="absolute pointer-events-none w-[250px] h-[250px]"
           style={{
             left: mousePosition.x,
             top: mousePosition.y,
