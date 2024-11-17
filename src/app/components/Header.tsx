@@ -15,13 +15,13 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className="relative max-h-screen flex flex-col items-end justify-between text-right bg-white text-black px-4 sm:px-8 md:px-10 pt-8 sm:pt-12 md:pt-16 pb-16"
+      className="relative flex flex-col items-end justify-between text-right bg-white text-black px-4 sm:px-8 md:px-10 pt-8 sm:pt-12 md:pt-16 pb-16"
       onMouseMove={handleMouseMove}
     >
       <motion.img
         onClick={playClickSound}
         src="/me.svg"
-        className="w-[200px] sm:w-[250px] md:w-[300px] h-auto"
+        className="w-[240px] sm:w-[360px] md:w-[480px] h-auto"
         alt="Profile"
       />
       <motion.h1
@@ -34,7 +34,7 @@ const Header: React.FC = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] leading-tight sm:leading-snug mt-[200px] sm:mt-[220px] lg:mt-[240px] "
+        className="text-[40px] sm:text-[48px] lg:text-[56px] custom-834:text-[60px] custom-440:text-[40px] custom-320:text-[32px] leading-tight sm:leading-snug mt-[200px] sm:mt-[220px] lg:mt-[240px] "
       >
         INIOBONG UKPONG IS A HIGHLY SKILLED FULL-STACK DEVELOPER WITH A PASSION
         FOR BUILDING INNOVATIVE AND USER-FRIENDLY WEB AND MOBILE APPLICATIONS.

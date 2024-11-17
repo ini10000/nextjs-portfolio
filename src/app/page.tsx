@@ -7,11 +7,9 @@ import Technologies from "./components/Technologies";
 const Home: React.FC = () => (
   <div className="min-h-screen flex flex-col justify-between">
     <Header />
-    <main className="flex-grow">
-      <ProjectList />
-      <Technologies />
-      <Experience />
-    </main>
+    <ProjectList />
+    <Technologies />
+    <Experience />
     <Footer />
   </div>
 );

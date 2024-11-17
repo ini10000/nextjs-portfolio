@@ -31,12 +31,12 @@ const Experience: React.FC = () => {
           >
             <div className="flex flex-col items-start py-6 md:py-10">
               {/* Experience Title */}
-              <p className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px]">
+              <p className="text-[48px] sm:text-[56px] lg:text-[72px] custom-834:text-[60px] custom-440:text-[48px] custom-320:text-[40px]">
                 {experience.title}
               </p>
 
               {/* Duration */}
-              <p className="text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px] text-gray-600">
+              <p className="text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px]">
                 {experience.duration}
               </p>
             </div>

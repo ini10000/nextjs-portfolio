@@ -19,7 +19,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
         clicked
           ? "bg-black text-orange-500"
           : "bg-orange-500 hover:bg-white text-black "
-      } transition-colors duration-500 flex justify-between items-center border border-black`}
+      } transition-colors duration-500 flex justify-between items-center ${
+        name === "COLDTIVATE" ? "border-t border-b" : "border-b"
+      } border-black`}
       onClick={() => {
         playClickSound();
         setClicked(true);
@@ -30,7 +32,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
       }}
       transition={{ duration: 1 }}
     >
-      <h2 className="text-[24px] sm:text-[40px] md:text-[60px] lg:text-[80px]">
+      <h2 className="text-[48px] sm:text-[56px] lg:text-[72px] custom-834:text-[60px] custom-440:text-[48px] custom-320:text-[40px]">
         {name}
       </h2>
       <Image
