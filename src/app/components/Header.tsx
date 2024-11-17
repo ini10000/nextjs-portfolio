@@ -2,10 +2,13 @@
 // components/Header.tsx
 import { motion } from "framer-motion";
 import { useState, MouseEvent } from "react";
+import useSound from "../hooks/useSound";
 
 const Header: React.FC = () => {
   const [hovered, setHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const playHoverSound = useSound("/hover.mp3");
+  const playClickSound = useSound("/click.mp3");
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
@@ -17,13 +20,20 @@ const Header: React.FC = () => {
       onMouseMove={handleMouseMove}
     >
       <motion.img
+        onClick={playClickSound}
         src="/me.svg"
         className="w-[200px] sm:w-[250px] md:w-[300px] h-auto"
         alt="Profile"
       />
       <motion.h1
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
+        onMouseEnter={() => {
+          playHoverSound();
+          setHovered(true);
+        }}
+        onMouseLeave={() => {
+          playHoverSound();
+          setHovered(false);
+        }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
