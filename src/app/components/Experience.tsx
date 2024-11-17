@@ -36,9 +36,7 @@ const Experience: React.FC = () => {
               </p>
 
               {/* Duration */}
-              <p className="text-[16px] sm:text-[20px] md:text-[24px] lg:text-[28px]">
-                {experience.duration}
-              </p>
+              <p className="text-[18px]">{experience.duration}</p>
             </div>
             {index !== 2 && (
               <div className="mt-8 md:mt-12 flex">

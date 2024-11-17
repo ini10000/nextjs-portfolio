@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       <motion.img
         onClick={playClickSound}
         src="/me.svg"
-        className="w-[240px] sm:w-[360px] md:w-[480px] h-auto"
+        className="h-[64px]"
         alt="Profile"
       />
       <motion.h1

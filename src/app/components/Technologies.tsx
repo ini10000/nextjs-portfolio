@@ -33,7 +33,7 @@ const Technologies: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       />
-      <p className="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[50px] z-20">
+      <p className="text-[40px] sm:text-[48px] lg:text-[56px] custom-834:text-[60px] custom-440:text-[40px] custom-320:text-[32px] z-20">
         PROVEN ABILITY TO DESIGN, DEVELOP, AND DEPLOY ROBUST AND SCALABLE
         APPLICATIONS. PROFICIENT IN A WIDE RANGE OF TECHNOLOGIES, INCLUDING
         REACT, NODE.JS, PYTHON, AND MORE.

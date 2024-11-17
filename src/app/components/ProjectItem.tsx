@@ -20,8 +20,10 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
           ? "bg-black text-orange-500"
           : "bg-orange-500 hover:bg-white text-black "
       } transition-colors duration-500 flex justify-between items-center ${
-        name === "COLDTIVATE" ? "border-t border-b" : "border-b"
-      } border-black`}
+        name === "COLDTIVATE"
+          ? "border-t-[4px] border-b-[4px]"
+          : "border-b-[4px]"
+      } border-black `}
       onClick={() => {
         playClickSound();
         setClicked(true);
