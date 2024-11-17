@@ -14,14 +14,12 @@ const links = [
 ];
 
 const Footer: React.FC = () => {
-  const playHoverSound = useSound("/hover.mp3");
   const playClickSound = useSound("/click.mp3");
 
   return (
     <footer className="bg-orange-500 p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col items-end text-black uppercase border-t border-black">
       {links.map((link, index) => (
         <motion.a
-          onMouseEnter={playHoverSound}
           onClick={playClickSound}
           key={index}
           href={link.url}

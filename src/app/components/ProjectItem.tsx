@@ -11,12 +11,10 @@ interface ProjectItemProps {
 
 const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
   const [clicked, setClicked] = useState(false);
-  const playHoverSound = useSound("/hover.mp3");
   const playClickSound = useSound("/click.mp3");
 
   return (
     <motion.div
-      onMouseEnter={playHoverSound}
       className={`p-4 sm:p-6 md:p-8 cursor-pointer ${
         clicked
           ? "bg-black text-orange-500"
@@ -27,7 +25,8 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ name, link }) => {
         setClicked(true);
         setTimeout(() => {
           window.open(link, "_blank"); // Open the link in a new tab
-        }, 1000); // Delay to show black screen briefly
+          setClicked(false);
+        }, 2000); // Delay to show black screen briefly
       }}
       transition={{ duration: 1 }}
     >

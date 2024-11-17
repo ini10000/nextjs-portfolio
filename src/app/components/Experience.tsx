@@ -16,14 +16,12 @@ const experiences: ExperienceItem[] = [
 ];
 
 const Experience: React.FC = () => {
-  const playHoverSound = useSound("/hover.mp3");
   const playClickSound = useSound("/click.mp3");
   return (
     <section className="px-4 sm:px-8 md:px-10 lg:px-16 pb-16 bg-white text-black">
       <div>
         {experiences.map((experience, index) => (
           <motion.div
-            onMouseEnter={playHoverSound}
             onClick={playClickSound}
             key={index}
             className="relative flex flex-col space-y-1"

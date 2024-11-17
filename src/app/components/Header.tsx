@@ -7,7 +7,6 @@ import useSound from "../hooks/useSound";
 const Header: React.FC = () => {
   const [hovered, setHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const playHoverSound = useSound("/hover.mp3");
   const playClickSound = useSound("/click.mp3");
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
@@ -16,7 +15,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className="relative min-h-screen flex flex-col items-end justify-between text-right bg-white text-black px-4 sm:px-8 md:px-10 pt-8 sm:pt-12 md:pt-16 pb-16"
+      className="relative max-h-screen flex flex-col items-end justify-between text-right bg-white text-black px-4 sm:px-8 md:px-10 pt-8 sm:pt-12 md:pt-16 pb-16"
       onMouseMove={handleMouseMove}
     >
       <motion.img
@@ -27,17 +26,15 @@ const Header: React.FC = () => {
       />
       <motion.h1
         onMouseEnter={() => {
-          playHoverSound();
           setHovered(true);
         }}
         onMouseLeave={() => {
-          playHoverSound();
           setHovered(false);
         }}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-[24px] sm:text-[32px] md:text-[48px] lg:text-[64px] leading-snug"
+        className="text-[18px] sm:text-[24px] md:text-[32px] lg:text-[40px] xl:text-[48px] 2xl:text-[56px] leading-tight sm:leading-snug mt-[200px] sm:mt-[220px] lg:mt-[240px] "
       >
         INIOBONG UKPONG IS A HIGHLY SKILLED FULL-STACK DEVELOPER WITH A PASSION
         FOR BUILDING INNOVATIVE AND USER-FRIENDLY WEB AND MOBILE APPLICATIONS.
